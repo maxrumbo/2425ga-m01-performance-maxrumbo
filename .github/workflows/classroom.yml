@@ -71,6 +71,7 @@ jobs:
           0.0
         comparison-method: exact
         timeout: 1
+        max-score: 20
     - name: m01-test-04
       id: m01-test-04
       uses: classroom-resources/autograding-io-grader@v1
@@ -147,6 +148,7 @@ jobs:
           0.0
         comparison-method: exact
         timeout: 1
+        max-score: 20
     - name: m01-test-05
       id: m01-test-05
       uses: classroom-resources/autograding-io-grader@v1
@@ -160,6 +162,7 @@ jobs:
         expected-output: ''
         comparison-method: exact
         timeout: 1
+        max-score: 20
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
