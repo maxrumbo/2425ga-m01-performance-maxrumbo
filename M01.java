@@ -16,7 +16,7 @@ public class M01 {
             if (kredit.equals("---")) {
                 kredit = kredit;
             } else {
-                nilaiangka = Integer.parseDouble(kredit);
+                nilaiangka = Integer.parseInt(kredit);
             }
             nilaihuruf = input.nextLine();
             if (nilaihuruf.equals("A")) {
