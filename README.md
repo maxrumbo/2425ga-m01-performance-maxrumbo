@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/57mkQJCS)
 ## M01 Performance
 
 Setiap semester, Ucok akan mendapatkan nilai performa-nya untuk setiap mata kuliah yang diikutinya. Performa setiap mata kuliah kemudian berkontribusi langsung pada pencapaian semester yang dikemas dalam satuan IPS (Indeks Prestasi Semester). Pada akhir masa studi, performa Ucok akan dihitung dan dikemas dalam satuan IPK (Indeks Prestasi Kumulatif).
