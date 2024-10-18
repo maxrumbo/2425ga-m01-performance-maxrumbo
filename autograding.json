@@ -1,0 +1,54 @@
+{
+  "tests": [
+    {
+      "name": "m01-test-01",
+      "setup": "javac M01.java",
+      "run": "java M01",
+      "input": "4\r\nA\r\n---\r\n---\r\n",
+      "output": "16.0\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "m01-test-01",
+      "setup": "javac M01.java",
+      "run": "java M01",
+      "input": "4\r\nAB\r\n3\r\nBC\r\n---\r\n---\r\n",
+      "output": "14.0\r\n7.5\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "m01-test-03",
+      "setup": "javac M01.java",
+      "run": "java M01",
+      "input": "2\r\nE\r\n3\r\nE\r\n4\r\nE\r\n---\r\n---\r\n",
+      "output": "0.0\r\n0.0\r\n0.0\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "m01-test-04",
+      "setup": "javac M01.java",
+      "run": "java M01",
+      "input": "4\r\nA\r\n3\r\nA\r\n2\r\nA\r\n4\r\nAB\r\n3\r\nAB\r\n2\r\nAB\r\n4\r\nB\r\n3\r\nB\r\n2\r\nB\r\n4\r\nBC\r\n3\r\nBC\r\n2\r\nBC\r\n4\r\nC\r\n3\r\nC\r\n2\r\nC\r\n4\r\nD\r\n3\r\nD\r\n2\r\nD\r\n4\r\nE\r\n3\r\nE\r\n2\r\nE\r\n---\r\n---\r\n",
+      "output": "16.0\r\n12.0\r\n8.0\r\n14.0\r\n10.5\r\n7.0\r\n12.0\r\n9.0\r\n6.0\r\n10.0\r\n7.5\r\n5.0\r\n8.0\r\n6.0\r\n4.0\r\n4.0\r\n3.0\r\n2.0\r\n0.0\r\n0.0\r\n0.0\r\n",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "m01-test-05",
+      "setup": "javac M01.java",
+      "run": "java M01",
+      "input": "---\r\n---\r\n",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": null
+    }
+  ]
+}
