@@ -8,46 +8,54 @@ public class M01 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String nilaihuruf, kredit;
-        double nilaiangka, performa;
+        double nilaiAngka, kreditAngka, performa;
+        String kredit, nilaiHuruf;
 
-        do {
-            kredit = input.nextLine();
+        kreditAngka = 0;
+        kredit = input.nextLine();
+        while (!kredit.equals("---")) {
             if (kredit.equals("---")) {
+                kredit = kredit;
             } else {
-                nilaihuruf = input.nextLine();
-                if (nilaihuruf.equals("A")) {
-                    nilaiangka = 4.0;
+                kreditAngka = Integer.parseInt(kredit);
+            }
+            nilaiHuruf = input.nextLine();
+            if (nilaiHuruf.equals("A")) {
+                nilaiAngka = 4.0;
+            } else {
+                if (nilaiHuruf.equals("AB")) {
+                    nilaiAngka = 3.5;
                 } else {
-                    if (nilaihuruf.equals("AB")) {
-                        nilaiangka = 3.5;
+                    if (nilaiHuruf.equals("B")) {
+                        nilaiAngka = 3.0;
                     } else {
-                        if (nilaihuruf.equals("B")) {
-                            nilaiangka = 3.0;
+                        if (nilaiHuruf.equals("BC")) {
+                            nilaiAngka = 2.5;
                         } else {
-                            if (nilaihuruf.equals("BC")) {
-                                nilaiangka = 2.5;
+                            if (nilaiHuruf.equals("C")) {
+                                nilaiAngka = 2.0;
                             } else {
-                                if (nilaihuruf.equals("C")) {
-                                    nilaiangka = 2.0;
+                                if (nilaiHuruf.equals("D")) {
+                                    nilaiAngka = 1.0;
                                 } else {
-                                    if (nilaihuruf.equals("D")) {
-                                        nilaiangka = 1.0;
+                                    if (nilaiHuruf.equals("E")) {
+                                        nilaiAngka = 0.0;
                                     } else {
-                                        if (nilaihuruf.equals("E")) {
-                                            nilaiangka = 0.0;
-                                        } else {
-                                            nilaiangka = 0.0;
-                                        }
+                                        nilaiAngka = 0.0;
                                     }
                                 }
                             }
                         }
                     }
                 }
-                performa = Integer.parseInt(kredit) * nilaiangka;
-                System.out.println(performa);
             }
-        } while (kredit.equals("---"));
+            performa = kreditAngka * nilaiAngka;
+            System.out.println(toFixed(performa,1));
+            kredit = input.nextLine();
+        }
+    }
+    
+    private static String toFixed(double value, int digits) {
+        return String.format("%." + digits + "f", value);
     }
 }
