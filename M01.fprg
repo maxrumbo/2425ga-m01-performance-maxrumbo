@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="M01"/>
+        <attribute name="authors" value="Lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-18 10:17:51 am"/>
+        <attribute name="created" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTEwLTE4OzA5OjU0OjE1IGFtOzI5NjQ="/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTEwLTE4OzEwOjE3OjUxIGFtOzI7MzA2NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="kredit, nilaihuruf" type="String" array="False" size=""/>
+            <declare name="nilaiangka, performa" type="Real" array="False" size=""/>
+            <input variable="kredit"/>
+            <while expression="kredit!=&quot;---&quot;">
+                <if expression="kredit=&quot;---&quot;">
+                    <then>
+                        <assign variable="kredit" expression="kredit"/>
+                    </then>
+                    <else>
+                        <assign variable="nilaiangka" expression="ToInteger(kredit)"/>
+                    </else>
+                </if>
+                <input variable="nilaihuruf"/>
+                <if expression="nilaihuruf = &quot;A&quot;">
+                    <then>
+                        <assign variable="nilaiangka" expression="4.0"/>
+                    </then>
+                    <else>
+                        <if expression="nilaihuruf = &quot;AB&quot;">
+                            <then>
+                                <assign variable="nilaiangka" expression="3.5"/>
+                            </then>
+                            <else>
+                                <if expression="nilaihuruf = &quot;B&quot;">
+                                    <then>
+                                        <assign variable="nilaiangka" expression="3.0"/>
+                                    </then>
+                                    <else>
+                                        <if expression="nilaihuruf = &quot;BC&quot;">
+                                            <then>
+                                                <assign variable="nilaiangka" expression="2.5"/>
+                                            </then>
+                                            <else>
+                                                <if expression="nilaihuruf = &quot;C&quot;">
+                                                    <then>
+                                                        <assign variable="nilaiangka" expression="2.0"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="nilaihuruf = &quot;D&quot;">
+                                                            <then>
+                                                                <assign variable="nilaiangka" expression="1.0"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="nilaihuruf = &quot;E&quot;">
+                                                                    <then>
+                                                                        <assign variable="nilaiangka" expression="0.0"/>
+                                                                    </then>
+                                                                    <else/>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <assign variable="performa" expression="ToReal(kredit)*nilaiangka"/>
+                <output expression="ToFixed(performa,1)" newline="True"/>
+                <input variable="kredit"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
