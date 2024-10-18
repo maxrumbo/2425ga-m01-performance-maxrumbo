@@ -13,11 +13,11 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: m01-test-01
-      id: m01-test-01
+    - name: m01-test-001
+      id: m01-test-001
       uses: classroom-resources/autograding-io-grader@v1
       with:
-        test-name: m01-test-01
+        test-name: m01-test-001
         setup-command: javac M01.java
         command: java M01
         input: |
@@ -30,11 +30,12 @@ jobs:
           '
         comparison-method: exact
         timeout: 1
-    - name: m01-test-01
-      id: m01-test-01
+        max-score: 20
+    - name: m01-test-002
+      id: m01-test-002
       uses: classroom-resources/autograding-io-grader@v1
       with:
-        test-name: m01-test-01
+        test-name: m01-test-002
         setup-command: javac M01.java
         command: java M01
         input: |
@@ -49,11 +50,12 @@ jobs:
           7.5
         comparison-method: exact
         timeout: 1
-    - name: m01-test-03
-      id: m01-test-03
+        max-score: 20
+    - name: m01-test-003
+      id: m01-test-003
       uses: classroom-resources/autograding-io-grader@v1
       with:
-        test-name: m01-test-03
+        test-name: m01-test-003
         setup-command: javac M01.java
         command: java M01
         input: |
@@ -71,11 +73,12 @@ jobs:
           0.0
         comparison-method: exact
         timeout: 1
-    - name: m01-test-04
-      id: m01-test-04
+        max-score: 20
+    - name: m01-test-004
+      id: m01-test-004
       uses: classroom-resources/autograding-io-grader@v1
       with:
-        test-name: m01-test-04
+        test-name: m01-test-004
         setup-command: javac M01.java
         command: java M01
         input: |
@@ -147,11 +150,12 @@ jobs:
           0.0
         comparison-method: exact
         timeout: 1
-    - name: m01-test-05
-      id: m01-test-05
+        max-score: 20
+    - name: m01-test-005
+      id: m01-test-005
       uses: classroom-resources/autograding-io-grader@v1
       with:
-        test-name: m01-test-05
+        test-name: m01-test-005
         setup-command: javac M01.java
         command: java M01
         input: |
@@ -160,12 +164,14 @@ jobs:
         expected-output: ''
         comparison-method: exact
         timeout: 1
+        max-score: 20
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
-        M01-TEST-01_RESULTS: "${{steps.m01-test-01.outputs.result}}"
-        M01-TEST-03_RESULTS: "${{steps.m01-test-03.outputs.result}}"
-        M01-TEST-04_RESULTS: "${{steps.m01-test-04.outputs.result}}"
-        M01-TEST-05_RESULTS: "${{steps.m01-test-05.outputs.result}}"
+        M01-TEST-001_RESULTS: "${{steps.m01-test-001.outputs.result}}"
+        M01-TEST-002_RESULTS: "${{steps.m01-test-002.outputs.result}}"
+        M01-TEST-003_RESULTS: "${{steps.m01-test-003.outputs.result}}"
+        M01-TEST-004_RESULTS: "${{steps.m01-test-004.outputs.result}}"
+        M01-TEST-005_RESULTS: "${{steps.m01-test-005.outputs.result}}"
       with:
-        runners: m01-test-01,m01-test-01,m01-test-03,m01-test-04,m01-test-05
+        runners: m01-test-001,m01-test-002,m01-test-003,m01-test-004,m01-test-005
